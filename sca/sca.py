@@ -36,7 +36,7 @@ class SingleCellArchetype():
         self.xn = norm(self.x, self.depths)
         
         # feature matrix 
-        self.xf = None 
+        self.xf = self.xn 
         return 
         
     def setup_feature_matrix(self, method='data'):
