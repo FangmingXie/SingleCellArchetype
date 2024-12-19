@@ -6,8 +6,8 @@ A wrapper of the `ulfaslak/py_pcha` python package that implements the PCHA algo
  2. [Subheading 2](#Setting-up-locally)
 
 ## Getting started
-To run through a minimum example of `SingleCellArchetype`, go directly here **→**
-[![Open in colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FangmingXie/SingleCellArchetype/blob/main/sca/tutorial_sca.ipynb) **←** 
+To run through a minimum example of `SingleCellArchetype`, go directly [here](https://github.com/FangmingXie/SingleCellArchetype/blob/main/sca/tutorial_minimum.ipynb) **→**
+[![Open in colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FangmingXie/SingleCellArchetype/blob/main/sca/tutorial_minimum.ipynb) **←** 
 
 You can run through this tutorial in your web browser in ~1 minute. No need to set up anything else.
 
