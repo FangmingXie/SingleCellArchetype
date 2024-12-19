@@ -21,9 +21,9 @@ The code base is a wrapper and extension of the `ulfaslak/py_pcha` package ([lin
 ```
 SingleCellArchetype/
 ├── README.md
-├── data
+├── data/
 │   └── data_snrna_v1.h5ad        # sample data
-└── sca
+└── sca/
     ├── utils.py                  # utility functions
     ├── sca.py                    # the SingleCellArchetype class
     ├── tutorial_complete.ipynb   # a short tutorial (~1 min)
