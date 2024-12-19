@@ -1,4 +1,7 @@
 # SingleCellArchetype
+Go directly here **→**
+[![Open in colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FangmingXie/SingleCellArchetype/blob/main/sca/tutorial_minimum.ipynb) for a short tutorial (~1 min).
+
 ## Table of Contents
 1. [Project overview](#Project-overview)
 2. [Repository structure](#Repository-structure)
