@@ -11,6 +11,9 @@ This repository contains code for Archetypal Analysis of single-cell RNA-seq dat
 
 The code base is a wrapper and extension of the `ulfaslak/py_pcha` package ([link](https://github.com/ulfaslak/py_pcha)) that implements the PCHA algorithm.
 
+![img](https://github.com/FangmingXie/SingleCellArchetype/blob/main/data/img.png)
+*Figure: Archetypal analysis of the transcriptomic continuum of L2/3 excitatory neurons (Xie et al. 2024).*
+
 ## Repository structure
 ```
 SingleCellArchetype/
