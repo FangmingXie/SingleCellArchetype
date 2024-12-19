@@ -2,12 +2,12 @@
 A wrapper of the `ulfaslak/py_pcha` python package that implements the PCHA algorithm for Archetypal Analysis by Mørup et. al.
 
 ## Table of Contents
- 1. [Subheading 1](#Getting-started)
- 2. [Subheading 2](#Setting-up-locally)
+ 1. [Getting started](#Getting-started)
+ 2. [Setting up locally](#Setting-up-locally)
 
 ## Getting started
-To run through a minimum example of `SingleCellArchetype`, go directly [here](https://github.com/FangmingXie/SingleCellArchetype/blob/main/sca/tutorial_minimum.ipynb) **→**
-[![Open in colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FangmingXie/SingleCellArchetype/blob/main/sca/tutorial_minimum.ipynb) **←** 
+To run through a minimum example of `SingleCellArchetype`, go directly [here](https://github.com/FangmingXie/SingleCellArchetype/blob/main/sca/tutorial_minimum.ipynb) or
+[![Open in colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/FangmingXie/SingleCellArchetype/blob/main/sca/tutorial_minimum.ipynb)
 
 You can run through this tutorial in your web browser in ~1 minute. No need to set up anything else.
 
@@ -29,4 +29,6 @@ git clone git@github.com:FangmingXie/SingleCellArchetype.git
 ```
 
 ### Step 3. follow the tutorials
-in your own jupyter notebook or jupyter lab.
+Run through the tutorials in your own jupyter notebook or jupyter lab.
+- `sca/tutorial_minimum.ipynb`
+- `sca/tutorial_complete.ipynb`
