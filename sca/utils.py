@@ -2,15 +2,10 @@
 """
 
 import numpy as np
-# import pandas as pd
 from scipy.stats import zscore
-# from scipy import sparse 
 from scipy.spatial import ConvexHull
 from sklearn.decomposition import PCA
 import matplotlib.pyplot as plt
-# import seaborn as sns
-
-# import anndata as sc
 from py_pcha import PCHA
 
 
@@ -68,7 +63,7 @@ def pcha(X, noc=3, delta=0, **kwargs):
     XC = XC[:,np.argsort(XC[0])] # assign an order according to x-axis 
     return XC 
 
-def downsamp(x, which='cell', p=0.8, seed=None):
+def downsamp(x, which='cell', p=0.8, seed=None, return_cond=False):
     """
     Arguments:
         x - cell by gene matrix
@@ -80,11 +75,18 @@ def downsamp(x, which='cell', p=0.8, seed=None):
     rng = np.random.default_rng(seed=seed)
     
     if which in [0, 'cell', 'row']:
-        return x[rng.random(n0)<p, :]
+        cond = rng.random(n0)<p
+        xout = x[cond, :]    
     elif which in [1, 'gene', 'col', 'column']:
-        return x[:, rng.random(n1)<p]
+        cond = rng.random(n1)<p
+        xout = x[:, cond]
     else:
         raise ValueError('choose from cell or gene')
+    
+    if return_cond:
+        return xout, cond
+    else:
+        return xout
         
 def shuffle_rows_per_col(x, seed=None):
     """

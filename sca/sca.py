@@ -3,15 +3,7 @@
 
 import numpy as np
 import pandas as pd
-# from scipy.stats import zscore
-# from scipy import sparse 
-# from scipy.spatial import ConvexHull
-# from sklearn.decomposition import PCA
-# import matplotlib.pyplot as plt
-# import seaborn as sns
-
-# import anndata as sc
-# from py_pcha import PCHA
+from scipy import stats
 
 from utils import *
 
@@ -86,13 +78,24 @@ class SingleCellArchetype():
         self.aa = aa
         return (xp, aa)
         
-    def downsamp_proj_pcha(self, ndim, noc, nrepeats=10, which='cell', p=0.8, **kwargs): 
+    def downsamp_proj_pcha(self, ndim, noc, nrepeats=10, which='cell', p=0.8, 
+                           preserve_embedding_sign=True, **kwargs): 
         """
         """
+        xp0 = proj(self.xf, ndim)
+        
         aa_dsamps = []
         for i in range(nrepeats):
-            xn_dsamp = downsamp(self.xf, which=which, p=p)
+            xn_dsamp, cond_dsamp = downsamp(self.xf, which=which, p=p, return_cond=True)
             xp_dsamp = proj(xn_dsamp, ndim)
+            
+            # match sign
+            if preserve_embedding_sign:
+                for i in range(ndim):
+                    r, _ = stats.pearsonr(xp0[cond_dsamp,i], xp_dsamp[:,i])
+                    sign = 2*int(r>0)-1
+                    xp_dsamp[:,i] = sign*xp_dsamp[:,i]
+            
             aa_dsamp = pcha(xp_dsamp.T, noc=noc, **kwargs)
             aa_dsamps.append(aa_dsamp)
             
