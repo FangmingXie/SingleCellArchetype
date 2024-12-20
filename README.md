@@ -10,9 +10,9 @@ Go directly here **→**
 3. [Cite](#Cite)
 
 ## Project overview
-This repository contains code for Archetypal Analysis of single-cell RNA-seq data as described in [Xie et al. 2024](https://www.biorxiv.org/content/10.1101/2023.12.18.572244v2), an application and extension of Pareto multi-tasking theory as described in [Adler et al. 2019](https://doi.org/10.1016/j.celrep.2023.112412). 
+This repository contains code for **Archetypal Analysis** of single-cell RNA-seq data as described in [Xie et al. 2024](https://www.biorxiv.org/content/10.1101/2023.12.18.572244v2), an application and extension of Pareto multi-tasking theory as described in [Adler et al. 2019](https://doi.org/10.1016/j.celrep.2023.112412). 
 
-The code base is a wrapper and extension of the `ulfaslak/py_pcha` package ([link](https://github.com/ulfaslak/py_pcha)) that implements the PCHA algorithm.
+The code base is a wrapper and extension of the [`ulfaslak/py_pcha`](https://github.com/ulfaslak/py_pcha) package that implements the **PCHA** algorithm.
 
 ![img](https://github.com/FangmingXie/SingleCellArchetype/blob/main/data/img.png)
 *Figure: Archetypal analysis of the transcriptomic continuum of L2/3 excitatory neurons (Xie et al. 2024).*
